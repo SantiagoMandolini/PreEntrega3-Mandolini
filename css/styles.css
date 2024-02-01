@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #93b7be, #554348, #D4F5F5);
+}
+
+header nav.navbar {
+  background: linear-gradient(to bottom, #93b7be, #D4F5F5);
+}
+
+footer {
+  background: linear-gradient(to bottom, #93b7be, #D4F5F5);
+  color: rgb(0, 0, 0);
+  text-align: right;
+  padding: 10px;
+  position: absolute bottom;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+}
+
+.footer-image {
+  width: 50px;
+  height: auto;
+}
+
+#carouselWithControls {
+  height: 700px;
+  width: 600px;
+}
+
+#carouselWithControls img {
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+}
+
+#carouselWithControls {
+  max-width: 800px;
+  margin: auto;
+}
+
+.producto {
+  overflow: hidden;
+}
+
+.producto img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover img {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=styles.css.map */
