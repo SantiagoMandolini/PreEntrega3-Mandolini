@@ -1,58 +1,79 @@
+//Variables de colores
+$primary-color: #93b7be;
+$secondary-color: #554348;
+$background-color: #D4F5F5;
+
+// Tamaño de la imagenes
+$standard-image-width: 400px;
+$standard-image-height: 300px;
+
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #93b7be, #554348, #D4F5F5);
+  background: linear-gradient(to bottom, $primary-color, $secondary-color, $background-color);
 }
 
-header nav.navbar {
-  background: linear-gradient(to bottom, #93b7be, #D4F5F5);
+header {
+  nav.navbar {
+    background: linear-gradient(to bottom, $primary-color, $background-color);
+  }
 }
 
 footer {
-  background: linear-gradient(to bottom, #93b7be, #D4F5F5);;
+  background: linear-gradient(to bottom, $primary-color, $background-color);
   color: rgb(0, 0, 0);
   text-align: right;
   padding: 10px;
-  position: absolute bottom;
+  position: fixed;
   bottom: 0;
   width: 100%;
-}
 
-.footer-content {
-  display: flex;
-  align-items: center;
-}
+  .footer-content {
+    display: flex;
+    align-items: center;
 
-.footer-image {
-  width: 50px;
-  height: auto;
-}
-
-#carouselWithControls {
-  height: 700px;
-  width: 600px;
-}
-
-#carouselWithControls img {
-  width: 700px;
-  height: 600px;
-  object-fit: cover;
+    .footer-image {
+      width: 50px;
+      height: auto;
+    }
+  }
 }
 
 #carouselWithControls {
-  max-width: 800px;
+  width: 100%;
+  max-width: 100%;
   margin: auto;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: $standard-image-height / $standard-image-width * 100%;
+    max-width: $standard-image-width;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .producto {
   overflow: hidden;
+
+  img {
+    width: 100%;
+    height: $standard-image-height / $standard-image-width * 100%;
+    max-width: $standard-image-width;
+    transition: transform 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
-.producto img {
-  width: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.producto:hover img {
-  transform: scale(1.2);
+@media only screen and (max-width: 767px) {
+  #carouselWithControls {
+    height: 50vh;
+  }
 }
